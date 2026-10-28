@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T09:00:00Z",
+  "updated": "2026-10-28T11:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -34,6 +34,43 @@
               "sha256": "f98ff24679154fa315b1c88c948396b9692792f8d827c63792b40808cb2861d4",
               "size": 6374000,
               "entry": "web-search-mcp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "go-prolog-mcp",
+      "title": {
+        "ru": "Prolog-движок",
+        "en": "Prolog engine"
+      },
+      "description": {
+        "ru": "Логический вывод и проверка правил: запросы на Prolog, проверка workflow, выбор задач, сверка памяти.",
+        "en": "Logic queries and rule checking: Prolog queries, workflow validation, task selection, memory verification."
+      },
+      "category": "logic",
+      "repository": "https://github.com/kirill-scherba/go-prolog-mcp",
+      "core": false,
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "transport": "stdio",
+          "command": [
+            "go-prolog-mcp"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_windows-amd64.zip",
+              "sha256": "214e4caec0701e3e037b2c9d6650f60373559c532d990e8f6a21dfa89928a5d9",
+              "size": 3577656,
+              "entry": "go-prolog-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_linux-amd64.zip",
+              "sha256": "cb6b548ba94a9e567a69355e084deb0c469a3c4ad9ff5d366d0344d01c58a580",
+              "size": 3520525,
+              "entry": "go-prolog-mcp"
             }
           }
         }
