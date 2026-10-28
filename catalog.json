@@ -1,11 +1,17 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T08:20:00Z",
+  "updated": "2026-10-28T08:40:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
-      "title": "Веб-поиск",
-      "description": "Поиск в DuckDuckGo, чтение страниц, семантический отбор по вопросу и поиск по ранее прочитанному.",
+      "title": {
+        "ru": "Веб-поиск",
+        "en": "Web search"
+      },
+      "description": {
+        "ru": "Поиск в DuckDuckGo, чтение страниц, семантический отбор по вопросу и поиск по ранее прочитанному.",
+        "en": "DuckDuckGo search, page reading, semantic ranking against a question, and search over what was already read."
+      },
       "category": "web",
       "repository": "https://github.com/kirill-scherba/web-search-mcp",
       "core": false,
@@ -35,5 +41,9 @@
         }
       }
     }
+  ],
+  "locales": [
+    "ru",
+    "en"
   ]
 }
