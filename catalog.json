@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T11:55:00Z",
+  "updated": "2026-10-28T13:10:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -78,6 +78,43 @@
       "aliases": [
         "prolog-mcp"
       ]
+    },
+    {
+      "name": "go-test-oracle-mcp",
+      "title": {
+        "ru": "Тесты Go",
+        "en": "Go tests"
+      },
+      "description": {
+        "ru": "Разбор Go-функции и генерация тестов: граничные случаи, табличные тесты, фаззинг.",
+        "en": "Analyse a Go function and generate tests: edge cases, table tests, fuzzing."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/go-test-oracle",
+      "core": false,
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "transport": "stdio",
+          "command": [
+            "go-test-oracle-mcp"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_windows-amd64.zip",
+              "sha256": "56c9df5185a295ebf0cab0997c6bf8194f9e711add5b355552232eaf81e580d3",
+              "size": 1145854,
+              "entry": "go-test-oracle-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_linux-amd64.zip",
+              "sha256": "43ea003b481cf2b38ef8f0efb535265e13819ea2a05a3022a0e918d5eeae8eb2",
+              "size": 1102083,
+              "entry": "go-test-oracle-mcp"
+            }
+          }
+        }
+      }
     }
   ],
   "locales": [
