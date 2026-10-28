@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T11:20:00Z",
+  "updated": "2026-10-28T11:40:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -26,13 +26,13 @@
             "windows-amd64": {
               "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_windows-amd64.zip",
               "sha256": "35dbd1b0cc7152adf714c9927d224bd7b26c140b1c361a6e7314da7429e3f5db",
-              "size": 6380000,
+              "size": 6378948,
               "entry": "web-search-mcp.exe"
             },
             "linux-amd64": {
               "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_linux-amd64.zip",
               "sha256": "f98ff24679154fa315b1c88c948396b9692792f8d827c63792b40808cb2861d4",
-              "size": 6374000,
+              "size": 6373781,
               "entry": "web-search-mcp"
             }
           }
