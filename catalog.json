@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T07:50:00Z",
+  "updated": "2026-10-28T08:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -9,9 +9,9 @@
       "category": "web",
       "repository": "https://github.com/kirill-scherba/web-search-mcp",
       "core": false,
-      "latest": "0.2.0",
+      "latest": "0.2.1",
       "versions": {
-        "0.2.0": {
+        "0.2.1": {
           "transport": "stdio",
           "command": [
             "web-search-mcp",
@@ -20,15 +20,15 @@
           ],
           "assets": {
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.0/web-search-mcp_0.2.0_windows-amd64.zip",
-              "sha256": "b408fc2379e1b3fa967266e56a98263ffe85d7ddad232248c9163878d0e2c8b1",
-              "size": 6378384,
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.1/web-search-mcp_0.2.1_windows-amd64.zip",
+              "sha256": "cf3195362e03ebedb562a236640a2a9088992206f928ac1e8e911370ea22349e",
+              "size": 6378913,
               "entry": "web-search-mcp.exe"
             },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.0/web-search-mcp_0.2.0_linux-amd64.zip",
-              "sha256": "3ec58feb48a049f182a17d650f1eaedd190f9361f746b7db99a82f295f48c853",
-              "size": 6373080,
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.1/web-search-mcp_0.2.1_linux-amd64.zip",
+              "sha256": "b95f12f1b3cab9e40b440b7492b1ded951c570f165776334fc0010dd66de76c9",
+              "size": 6373633,
               "entry": "web-search-mcp"
             }
           }
