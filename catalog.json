@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T13:10:00Z",
+  "updated": "2026-10-28T13:40:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -111,6 +111,47 @@
               "sha256": "43ea003b481cf2b38ef8f0efb535265e13819ea2a05a3022a0e918d5eeae8eb2",
               "size": 1102083,
               "entry": "go-test-oracle-mcp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "scheduler-mcp",
+      "title": {
+        "ru": "Планировщик",
+        "en": "Scheduler"
+      },
+      "description": {
+        "ru": "Отложенные и повторяющиеся задачи для агента: почта, вакансии, напоминания. Задачи хранятся в памяти установки.",
+        "en": "One-off and recurring tasks for the agent: mail, jobs, reminders. Tasks are kept in the installation's memory."
+      },
+      "category": "tools",
+      "repository": "https://github.com/kirill-scherba/scheduler-mcp",
+      "core": false,
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "transport": "stdio",
+          "command": [
+            "scheduler-mcp",
+            "serve"
+          ],
+          "env": {
+            "JOB_HUNT_WEBHOOK": ""
+          },
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/scheduler-mcp/releases/download/v0.1.0/scheduler-mcp_0.1.0_windows-amd64.zip",
+              "sha256": "26940508e2d64c961b373231e55f35dc42c77595a18c6eeef6200a7d445b0a38",
+              "size": 3912861,
+              "entry": "scheduler-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/scheduler-mcp/releases/download/v0.1.0/scheduler-mcp_0.1.0_linux-amd64.zip",
+              "sha256": "b7b6c377bceb050b40ae022f40743391a22c879d1d2f775f5dd3ed3d84d21e47",
+              "size": 3826124,
+              "entry": "scheduler-mcp"
             }
           }
         }
