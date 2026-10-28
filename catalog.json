@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "updated": "2026-10-28T07:50:00Z",
+  "servers": [
+    {
+      "name": "web-search-mcp",
+      "title": "Веб-поиск",
+      "description": "Поиск в DuckDuckGo, чтение страниц, семантический отбор по вопросу и поиск по ранее прочитанному.",
+      "category": "web",
+      "repository": "https://github.com/kirill-scherba/web-search-mcp",
+      "core": false,
+      "latest": "0.2.0",
+      "versions": {
+        "0.2.0": {
+          "transport": "stdio",
+          "command": [
+            "web-search-mcp",
+            "-db",
+            "${config}/web-search.db"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.0/web-search-mcp_0.2.0_windows-amd64.zip",
+              "sha256": "b408fc2379e1b3fa967266e56a98263ffe85d7ddad232248c9163878d0e2c8b1",
+              "size": 6378384,
+              "entry": "web-search-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.0/web-search-mcp_0.2.0_linux-amd64.zip",
+              "sha256": "3ec58feb48a049f182a17d650f1eaedd190f9361f746b7db99a82f295f48c853",
+              "size": 6373080,
+              "entry": "web-search-mcp"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
