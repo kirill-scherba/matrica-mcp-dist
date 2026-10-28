@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T11:40:00Z",
+  "updated": "2026-10-28T11:55:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -74,7 +74,10 @@
             }
           }
         }
-      }
+      },
+      "aliases": [
+        "prolog-mcp"
+      ]
     }
   ],
   "locales": [
