@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T18:45:00Z",
+  "updated": "2026-10-29T19:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -265,16 +265,16 @@
         "en": "Discord"
       },
       "description": {
-        "ru": "Отправка сообщений и embed'ов, чтение каналов, статус вебхука. Голосовой бот живёт на сервере отдельно.",
-        "en": "Send messages and embeds, read channels, webhook info. The voice bot runs on the server separately."
+        "ru": "Отправка сообщений и embed'ов, чтение каналов, вебхук. На Linux — с голосовым ботом, на Windows — только текст.",
+        "en": "Send messages and embeds, read channels, webhook info. Voice bot on Linux; text tools on Windows."
       },
       "category": "messaging",
       "repository": "https://github.com/kirill-scherba/discord-mcp",
       "docs": "https://github.com/kirill-scherba/discord-mcp#readme",
       "core": false,
-      "latest": "1.4.2",
+      "latest": "1.5.3",
       "versions": {
-        "1.4.2": {
+        "1.5.3": {
           "transport": "stdio",
           "command": [
             "discord-mcp"
@@ -295,15 +295,15 @@
           ],
           "assets": {
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.2/discord-mcp_1.4.2_windows-amd64.zip",
-              "sha256": "0d8557c1e2e82479822953a99f133503ef13f40b211f05c576d1ac1d2a1c6cfd",
-              "size": 3335517,
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.5.3/discord-mcp_1.5.3_windows-amd64.zip",
+              "sha256": "956629fb43065e865b46b1d6ab4f1db8eb436ca43a8825ed48a3417078b553d3",
+              "size": 3335526,
               "entry": "discord-mcp.exe"
             },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.2/discord-mcp_1.4.2_linux-amd64.zip",
-              "sha256": "2f4b84084cd4bc291b2eb4e28b0cb9bc061acf2a76666f7cc5972bda799dce74",
-              "size": 3291356,
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.5.3/discord-mcp_1.5.3_linux-amd64.zip",
+              "sha256": "476ff54daf6ebfa459b4f8932873e0743d92957e527972a3c0f32ba57d29269f",
+              "size": 10174706,
               "entry": "discord-mcp"
             }
           }
