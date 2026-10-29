@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T19:20:00Z",
+  "updated": "2026-10-29T20:00:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -305,6 +305,45 @@
               "sha256": "476ff54daf6ebfa459b4f8932873e0743d92957e527972a3c0f32ba57d29269f",
               "size": 10174706,
               "entry": "discord-mcp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "deploy-check",
+      "title": {
+        "ru": "Проверка деплоя",
+        "en": "Deploy check"
+      },
+      "description": {
+        "ru": "Здоровье сайта: код ответа, время, срок SSL, robots.txt и sitemap.xml. Perl-скрипт из ai-hub.",
+        "en": "Site health: status code, response time, SSL expiry, robots.txt and sitemap.xml. A Perl script from ai-hub."
+      },
+      "category": "web",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "deploy-check-mcp.pl"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
+              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "size": 2099,
+              "entry": "deploy-check-mcp.pl"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
+              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "size": 2099,
+              "entry": "deploy-check-mcp.pl"
             }
           }
         }
