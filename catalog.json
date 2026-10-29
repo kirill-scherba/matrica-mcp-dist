@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T18:20:00Z",
+  "updated": "2026-10-29T18:45:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -272,9 +272,9 @@
       "repository": "https://github.com/kirill-scherba/discord-mcp",
       "docs": "https://github.com/kirill-scherba/discord-mcp#readme",
       "core": false,
-      "latest": "1.4.1",
+      "latest": "1.4.2",
       "versions": {
-        "1.4.1": {
+        "1.4.2": {
           "transport": "stdio",
           "command": [
             "discord-mcp"
@@ -295,15 +295,15 @@
           ],
           "assets": {
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.1/discord-mcp_1.4.1_windows-amd64.zip",
-              "sha256": "c8f1471595a7d6a1d823d97eb6fcbf893fcf732ce65e61f5f9e673f149e0d8e2",
-              "size": 3336454,
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.2/discord-mcp_1.4.2_windows-amd64.zip",
+              "sha256": "0d8557c1e2e82479822953a99f133503ef13f40b211f05c576d1ac1d2a1c6cfd",
+              "size": 3335517,
               "entry": "discord-mcp.exe"
             },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.1/discord-mcp_1.4.1_linux-amd64.zip",
-              "sha256": "572800c2f858183217ba6e67ff1212f913a9ca613331e5ab41652a778aadf05f",
-              "size": 3292701,
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.2/discord-mcp_1.4.2_linux-amd64.zip",
+              "sha256": "2f4b84084cd4bc291b2eb4e28b0cb9bc061acf2a76666f7cc5972bda799dce74",
+              "size": 3291356,
               "entry": "discord-mcp"
             }
           }
