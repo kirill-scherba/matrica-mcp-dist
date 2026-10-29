@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T09:10:00Z",
+  "updated": "2026-10-29T11:55:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -168,6 +168,53 @@
         }
       },
       "docs": "https://github.com/kirill-scherba/gitlab-mcp#install-in-anytext"
+    },
+    {
+      "name": "github-mcp",
+      "title": {
+        "ru": "GitHub",
+        "en": "GitHub"
+      },
+      "description": {
+        "ru": "GitHub: репозитории, issues, pull requests, проекты, поиск кода. Внутри — Perl, внешний интерпретатор не нужен.",
+        "en": "GitHub: repos, issues, pull requests, projects, code search. Perl inside; no external interpreter."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/github-mcp",
+      "docs": "https://github.com/kirill-scherba/github-mcp#readme",
+      "core": false,
+      "latest": "1.3.0",
+      "versions": {
+        "1.3.0": {
+          "transport": "stdio",
+          "command": [
+            "github-mcp"
+          ],
+          "settings": [
+            {
+              "key": "GITHUB_TOKEN",
+              "label": "personal access token",
+              "hint": "GitHub → Settings → Developer settings → Tokens",
+              "required": true,
+              "secret": true
+            }
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_windows-amd64.zip",
+              "sha256": "7a45e1619556752701d02fc9dd31a01f9f89c7031b5474ac3eb12e2cf6bf5f85",
+              "size": 16169540,
+              "entry": "github-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_linux-amd64.zip",
+              "sha256": "5edcf05f9bd0847260b72496641a69584d8ff814d354504d91676bae5744e0ef",
+              "size": 16099082,
+              "entry": "github-mcp"
+            }
+          }
+        }
+      }
     }
   ],
   "locales": [
