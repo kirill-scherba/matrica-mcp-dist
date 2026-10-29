@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T20:00:00Z",
+  "updated": "2026-10-29T20:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -344,6 +344,100 @@
               "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
               "size": 2099,
               "entry": "deploy-check-mcp.pl"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "cloudflare-mcp",
+      "title": {
+        "ru": "Cloudflare",
+        "en": "Cloudflare"
+      },
+      "description": {
+        "ru": "DNS-записи и зоны Cloudflare. Perl-скрипт из ai-hub.",
+        "en": "Cloudflare DNS records and zones. A Perl script from ai-hub."
+      },
+      "category": "infra",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "cloudflare-mcp.pl"
+          ],
+          "settings": [
+            {
+              "key": "CLOUDFLARE_API_TOKEN",
+              "label": "API-токен",
+              "hint": "Cloudflare → My Profile → API Tokens",
+              "secret": true
+            }
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
+              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "size": 2700,
+              "entry": "cloudflare-mcp.pl"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
+              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "size": 2700,
+              "entry": "cloudflare-mcp.pl"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "vision-mcp",
+      "title": {
+        "ru": "Зрение",
+        "en": "Vision"
+      },
+      "description": {
+        "ru": "Разбор изображения: OpenAI или локальная Ollama. Perl-скрипт из ai-hub.",
+        "en": "Image analysis via OpenAI or a local Ollama. A Perl script from ai-hub."
+      },
+      "category": "media",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "vision-mcp.pl"
+          ],
+          "settings": [
+            {
+              "key": "OPENAI_API_KEY",
+              "label": "ключ OpenAI (или OLLAMA_URL для локальной модели)",
+              "hint": "platform.openai.com → API keys",
+              "secret": true
+            }
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
+              "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
+              "size": 3458,
+              "entry": "vision-mcp.pl"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
+              "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
+              "size": 3458,
+              "entry": "vision-mcp.pl"
             }
           }
         }
