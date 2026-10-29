@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T12:20:00Z",
+  "updated": "2026-10-29T17:10:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -214,6 +214,45 @@
               "sha256": "5edcf05f9bd0847260b72496641a69584d8ff814d354504d91676bae5744e0ef",
               "size": 16099082,
               "entry": "github-mcp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "db-tool",
+      "title": {
+        "ru": "Базы данных",
+        "en": "Databases"
+      },
+      "description": {
+        "ru": "SQL через DBI: SQLite, MySQL, PostgreSQL. Скрипт на Perl, запускается Perl-рантаймом.",
+        "en": "SQL over DBI: SQLite, MySQL, PostgreSQL. A Perl script, run by a Perl runtime."
+      },
+      "category": "data",
+      "repository": "https://github.com/kirill-scherba/db-tool-mcp",
+      "docs": "https://github.com/kirill-scherba/db-tool-mcp#readme",
+      "core": false,
+      "latest": "1.0.1",
+      "versions": {
+        "1.0.1": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "db-tool-mcp.pl"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/db-tool-mcp/releases/download/v1.0.1/db-tool-mcp_1.0.1.zip",
+              "sha256": "11c5c446798f3ca583fcd78616fcfc57932d183623de5d7c49c65ef2893a5899",
+              "size": 8603,
+              "entry": "db-tool-mcp.pl"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/db-tool-mcp/releases/download/v1.0.1/db-tool-mcp_1.0.1.zip",
+              "sha256": "11c5c446798f3ca583fcd78616fcfc57932d183623de5d7c49c65ef2893a5899",
+              "size": 8603,
+              "entry": "db-tool-mcp.pl"
             }
           }
         }
