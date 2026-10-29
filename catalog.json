@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-28T16:05:00Z",
+  "updated": "2026-10-29T07:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -111,6 +111,43 @@
               "sha256": "43ea003b481cf2b38ef8f0efb535265e13819ea2a05a3022a0e918d5eeae8eb2",
               "size": 1102083,
               "entry": "go-test-oracle-mcp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "gitlab-mcp",
+      "title": {
+        "ru": "GitLab",
+        "en": "GitLab"
+      },
+      "description": {
+        "ru": "Работа с GitLab: проекты, задачи, merge request'ы, пайплайны. Внутри — Perl, внешний интерпретатор не нужен.",
+        "en": "GitLab work: projects, issues, merge requests, pipelines. Perl inside; no external interpreter."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/gitlab-mcp",
+      "core": false,
+      "latest": "1.1.0",
+      "versions": {
+        "1.1.0": {
+          "transport": "stdio",
+          "command": [
+            "gitlab-mcp"
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.0/gitlab-mcp_1.1.0_windows-amd64.zip",
+              "sha256": "6d6628e9e579bb5601c5f2542c730c9e55a62cdef7537db2787592306525976b",
+              "size": 16156242,
+              "entry": "gitlab-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.0/gitlab-mcp_1.1.0_linux-amd64.zip",
+              "sha256": "550fa6fa6d52fc73ef62d87d84b95f3661610c0735b8e421272228eb6a223ab0",
+              "size": 16088609,
+              "entry": "gitlab-mcp"
             }
           }
         }
