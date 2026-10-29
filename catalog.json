@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T17:40:00Z",
+  "updated": "2026-10-29T18:20:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -253,6 +253,58 @@
               "sha256": "092755c65107288bdd38e68f9f47b494980fdd271d9b31edf51295089a2f5abb",
               "size": 8603,
               "entry": "db-tool-mcp.pl"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "discord-mcp",
+      "title": {
+        "ru": "Discord",
+        "en": "Discord"
+      },
+      "description": {
+        "ru": "Отправка сообщений и embed'ов, чтение каналов, статус вебхука. Голосовой бот живёт на сервере отдельно.",
+        "en": "Send messages and embeds, read channels, webhook info. The voice bot runs on the server separately."
+      },
+      "category": "messaging",
+      "repository": "https://github.com/kirill-scherba/discord-mcp",
+      "docs": "https://github.com/kirill-scherba/discord-mcp#readme",
+      "core": false,
+      "latest": "1.4.1",
+      "versions": {
+        "1.4.1": {
+          "transport": "stdio",
+          "command": [
+            "discord-mcp"
+          ],
+          "settings": [
+            {
+              "key": "DISCORD_WEBHOOK_URL",
+              "label": "вебхук канала",
+              "hint": "Discord → Канал → Интеграции → Вебхуки",
+              "secret": true
+            },
+            {
+              "key": "DISCORD_BOT_TOKEN",
+              "label": "токен бота (для чтения каналов)",
+              "hint": "Discord Developer Portal → Bot",
+              "secret": true
+            }
+          ],
+          "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.1/discord-mcp_1.4.1_windows-amd64.zip",
+              "sha256": "c8f1471595a7d6a1d823d97eb6fcbf893fcf732ce65e61f5f9e673f149e0d8e2",
+              "size": 3336454,
+              "entry": "discord-mcp.exe"
+            },
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.4.1/discord-mcp_1.4.1_linux-amd64.zip",
+              "sha256": "572800c2f858183217ba6e67ff1212f913a9ca613331e5ab41652a778aadf05f",
+              "size": 3292701,
+              "entry": "discord-mcp"
             }
           }
         }
