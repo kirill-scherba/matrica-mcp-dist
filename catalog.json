@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T21:24:53Z",
+  "updated": "2026-10-29T22:41:48Z",
   "servers": [
     {
       "name": "cloudflare-mcp",
@@ -390,9 +390,9 @@
       "category": "mail",
       "repository": "https://github.com/kirill-scherba/mail-mcp",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "versions": {
-        "1.0.0": {
+        "1.1.0": {
           "transport": "stdio",
           "command": [
             "mail-mcp",
@@ -413,7 +413,7 @@
             {
               "key": "GMAIL_REDIRECT_URI",
               "label": "адрес возврата после входа",
-              "hint": "обычно http://127.0.0.1:7787/oauth/gmail"
+              "hint": "для приложения на своём компьютере: http://127.0.0.1:9999/oauth/callback (тип клиента «Desktop app»)"
             },
             {
               "key": "BREVO_SMTP_KEY",
@@ -425,19 +425,29 @@
               "key": "CALENDAR_DEFAULT_TIMEZONE",
               "label": "часовой пояс календаря",
               "hint": "например Europe/Moscow"
+            },
+            {
+              "key": "MAIL_MCP_CALLBACK_ADDR",
+              "label": "адрес локального приёмника OAuth",
+              "hint": "127.0.0.1:9999 — нужен для входа в Google на своём компьютере"
+            },
+            {
+              "key": "MAIL_MCP_INBOX_ADDR",
+              "label": "адрес приёма почты на домен (только сервер)",
+              "hint": "пусто = приём выключен"
             }
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.0.0/mail-mcp_1.0.0_linux-amd64.zip",
-              "sha256": "56e2435916d5526d2ac47c4e095b259faf1c833a35bac485a1227efdc5200dcf",
-              "size": 3048111,
+              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.0/mail-mcp_1.1.0_linux-amd64.zip",
+              "sha256": "64d658243bcd0841a5818bddad8a58d50c3c45a366eefb238a6152a4b64bc326",
+              "size": 3048307,
               "entry": "mail-mcp"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.0.0/mail-mcp_1.0.0_windows-amd64.zip",
-              "sha256": "b1fb63bfa343d223eab477e44d7a3b9e7969b2f8a86a68395186b64d62e5e1c6",
-              "size": 3118719,
+              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.0/mail-mcp_1.1.0_windows-amd64.zip",
+              "sha256": "341a8dfcd2a6be2ed1fc3534a8ab0f25d34e0c1c09b06263620714d8e06370b4",
+              "size": 3118751,
               "entry": "mail-mcp.exe"
             }
           }
