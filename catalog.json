@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T08:05:00Z",
+  "updated": "2026-10-29T08:30:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -129,24 +129,29 @@
       "category": "dev",
       "repository": "https://github.com/kirill-scherba/gitlab-mcp",
       "core": false,
-      "latest": "1.1.1",
+      "latest": "1.2.2",
       "versions": {
-        "1.1.1": {
+        "1.2.2": {
           "transport": "stdio",
           "command": [
             "gitlab-mcp"
           ],
           "assets": {
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_windows-amd64.zip",
+              "sha256": "6a0b6c64a5f81fc8e47f260e100c9166ba9be4082c1f9681c2d15576f3ca1e4a",
+              "size": 16157615,
+              "entry": "gitlab-mcp.exe"
+            },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.1/gitlab-mcp_1.1.1_linux-amd64.zip",
-              "sha256": "f9ca1d6022905e948928061279ba62c09b4752dc730fc3a47de92499dc247b5e",
-              "size": 16090243,
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_linux-amd64.zip",
+              "sha256": "34e4fbb79e8339ad07c2baaa1329e0da49688cfb5ff2c0ec8332b048adc161b9",
+              "size": 16089248,
               "entry": "gitlab-mcp"
             }
           }
         }
-      },
-      "note": "{\"ru\": \"\\u043f\\u043e\\u043a\\u0430 \\u0442\\u043e\\u043b\\u044c\\u043a\\u043e Linux: \\u0441\\u0431\\u043e\\u0440\\u043a\\u0430 \\u043f\\u043e\\u0434 Windows \\u0436\\u0434\\u0451\\u0442 \\u043e\\u0431\\u0445\\u043e\\u0434\\u0430 \\u043e\\u0433\\u0440\\u0430\\u043d\\u0438\\u0447\\u0435\\u043d\\u0438\\u044f \\u0432\\u0441\\u0442\\u0440\\u043e\\u0435\\u043d\\u043d\\u043e\\u0433\\u043e Perl\", \"en\": \"Linux only for now: the Windows build waits for a workaround in the embedded Perl\"}"
+      }
     }
   ],
   "locales": [
