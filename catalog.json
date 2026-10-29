@@ -1,221 +1,73 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T21:30:00Z",
+  "updated": "2026-10-29T20:31:49Z",
   "servers": [
     {
-      "name": "web-search-mcp",
+      "name": "cloudflare-mcp",
       "title": {
-        "ru": "Веб-поиск",
-        "en": "Web search"
+        "ru": "Cloudflare",
+        "en": "Cloudflare"
       },
       "description": {
-        "ru": "Поиск в DuckDuckGo, чтение страниц, семантический отбор по вопросу и поиск по ранее прочитанному.",
-        "en": "DuckDuckGo search, page reading, semantic ranking against a question, and search over what was already read."
+        "ru": "DNS-записи и зоны Cloudflare.",
+        "en": "Cloudflare DNS records and zones."
       },
-      "category": "web",
-      "repository": "https://github.com/kirill-scherba/web-search-mcp",
+      "category": "infra",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "0.2.2",
+      "latest": "1.0.0",
       "versions": {
-        "0.2.2": {
+        "1.0.0": {
           "transport": "stdio",
+          "install": "script",
           "command": [
-            "web-search-mcp"
-          ],
-          "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_windows-amd64.zip",
-              "sha256": "35dbd1b0cc7152adf714c9927d224bd7b26c140b1c361a6e7314da7429e3f5db",
-              "size": 6378948,
-              "entry": "web-search-mcp.exe"
-            },
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_linux-amd64.zip",
-              "sha256": "f98ff24679154fa315b1c88c948396b9692792f8d827c63792b40808cb2861d4",
-              "size": 6373781,
-              "entry": "web-search-mcp"
-            }
-          }
-        }
-      },
-      "docs": "https://github.com/kirill-scherba/web-search-mcp#install-in-anytext"
-    },
-    {
-      "name": "go-prolog-mcp",
-      "title": {
-        "ru": "Prolog-движок",
-        "en": "Prolog engine"
-      },
-      "description": {
-        "ru": "Логический вывод и проверка правил: запросы на Prolog, проверка workflow, выбор задач, сверка памяти.",
-        "en": "Logic queries and rule checking: Prolog queries, workflow validation, task selection, memory verification."
-      },
-      "category": "logic",
-      "repository": "https://github.com/kirill-scherba/go-prolog-mcp",
-      "core": false,
-      "latest": "0.1.0",
-      "versions": {
-        "0.1.0": {
-          "transport": "stdio",
-          "command": [
-            "go-prolog-mcp"
-          ],
-          "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_windows-amd64.zip",
-              "sha256": "214e4caec0701e3e037b2c9d6650f60373559c532d990e8f6a21dfa89928a5d9",
-              "size": 3577656,
-              "entry": "go-prolog-mcp.exe"
-            },
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_linux-amd64.zip",
-              "sha256": "cb6b548ba94a9e567a69355e084deb0c469a3c4ad9ff5d366d0344d01c58a580",
-              "size": 3520525,
-              "entry": "go-prolog-mcp"
-            }
-          }
-        }
-      },
-      "aliases": [
-        "prolog-mcp"
-      ],
-      "docs": "https://github.com/kirill-scherba/go-prolog-mcp#install-in-anytext"
-    },
-    {
-      "name": "go-test-oracle-mcp",
-      "title": {
-        "ru": "Тесты Go",
-        "en": "Go tests"
-      },
-      "description": {
-        "ru": "Разбор Go-функции и генерация тестов: граничные случаи, табличные тесты, фаззинг.",
-        "en": "Analyse a Go function and generate tests: edge cases, table tests, fuzzing."
-      },
-      "category": "dev",
-      "repository": "https://github.com/kirill-scherba/go-test-oracle",
-      "core": false,
-      "latest": "0.1.0",
-      "versions": {
-        "0.1.0": {
-          "transport": "stdio",
-          "command": [
-            "go-test-oracle-mcp"
-          ],
-          "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_windows-amd64.zip",
-              "sha256": "56c9df5185a295ebf0cab0997c6bf8194f9e711add5b355552232eaf81e580d3",
-              "size": 1145854,
-              "entry": "go-test-oracle-mcp.exe"
-            },
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_linux-amd64.zip",
-              "sha256": "43ea003b481cf2b38ef8f0efb535265e13819ea2a05a3022a0e918d5eeae8eb2",
-              "size": 1102083,
-              "entry": "go-test-oracle-mcp"
-            }
-          }
-        }
-      },
-      "docs": "https://github.com/kirill-scherba/go-test-oracle#install-in-anytext"
-    },
-    {
-      "name": "gitlab-mcp",
-      "title": {
-        "ru": "GitLab",
-        "en": "GitLab"
-      },
-      "description": {
-        "ru": "Работа с GitLab: проекты, задачи, merge request'ы, пайплайны. Внутри — Perl, внешний интерпретатор не нужен.",
-        "en": "GitLab work: projects, issues, merge requests, pipelines. Perl inside; no external interpreter."
-      },
-      "category": "dev",
-      "repository": "https://github.com/kirill-scherba/gitlab-mcp",
-      "core": false,
-      "latest": "1.2.2",
-      "versions": {
-        "1.2.2": {
-          "transport": "stdio",
-          "command": [
-            "gitlab-mcp"
-          ],
-          "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_windows-amd64.zip",
-              "sha256": "6a0b6c64a5f81fc8e47f260e100c9166ba9be4082c1f9681c2d15576f3ca1e4a",
-              "size": 16157615,
-              "entry": "gitlab-mcp.exe"
-            },
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_linux-amd64.zip",
-              "sha256": "34e4fbb79e8339ad07c2baaa1329e0da49688cfb5ff2c0ec8332b048adc161b9",
-              "size": 16089248,
-              "entry": "gitlab-mcp"
-            }
-          },
-          "settings": [
-            {
-              "key": "GITLAB_HOST",
-              "label": "адрес инстанса по умолчанию",
-              "hint": "https://gitlab.com или свой",
-              "required": true
-            },
-            {
-              "key": "GITLAB_TOKEN",
-              "label": "personal access token, scope api",
-              "hint": "GitLab → User settings → Access tokens",
-              "required": true,
-              "secret": true
-            }
-          ]
-        }
-      },
-      "docs": "https://github.com/kirill-scherba/gitlab-mcp#install-in-anytext"
-    },
-    {
-      "name": "github-mcp",
-      "title": {
-        "ru": "GitHub",
-        "en": "GitHub"
-      },
-      "description": {
-        "ru": "GitHub: репозитории, issues, pull requests, проекты, поиск кода. Внутри — Perl, внешний интерпретатор не нужен.",
-        "en": "GitHub: repos, issues, pull requests, projects, code search. Perl inside; no external interpreter."
-      },
-      "category": "dev",
-      "repository": "https://github.com/kirill-scherba/github-mcp",
-      "docs": "https://github.com/kirill-scherba/github-mcp#install-in-anytext",
-      "core": false,
-      "latest": "1.3.0",
-      "versions": {
-        "1.3.0": {
-          "transport": "stdio",
-          "command": [
-            "github-mcp"
+            "cloudflare-mcp.pl"
           ],
           "settings": [
             {
-              "key": "GITHUB_TOKEN",
-              "label": "personal access token",
-              "hint": "GitHub → Settings → Developer settings → Tokens",
-              "required": true,
+              "key": "CLOUDFLARE_API_TOKEN",
+              "label": "API-токен",
+              "hint": "Cloudflare → My Profile → API Tokens",
               "secret": true
             }
           ],
           "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_windows-amd64.zip",
-              "sha256": "7a45e1619556752701d02fc9dd31a01f9f89c7031b5474ac3eb12e2cf6bf5f85",
-              "size": 16169540,
-              "entry": "github-mcp.exe"
-            },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_linux-amd64.zip",
-              "sha256": "5edcf05f9bd0847260b72496641a69584d8ff814d354504d91676bae5744e0ef",
-              "size": 16099082,
-              "entry": "github-mcp"
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
+              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "size": 2700,
+              "entry": "cloudflare-mcp.pl"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
+              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "size": 2700,
+              "entry": "cloudflare-mcp.pl"
             }
           }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
+    },
+    {
+      "name": "cooksy",
+      "title": {
+        "ru": "Кукси (рецепты)",
+        "en": "Cooksy (recipes)"
+      },
+      "description": {
+        "ru": "Внешний сервис рецептов: поиск, подборки, избранное, публикация в Telegram. Живёт на cooksy.teonet.dev.",
+        "en": "External recipe service: search, picks, favourites, Telegram publishing. Hosted at cooksy.teonet.dev."
+      },
+      "category": "food",
+      "repository": "https://github.com/teonet-go/cooksy",
+      "docs": "https://cooksy.teonet.dev",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "transport": "http",
+          "url": "https://cooksy.teonet.dev/mcp"
         }
       }
     },
@@ -231,7 +83,6 @@
       },
       "category": "data",
       "repository": "https://github.com/kirill-scherba/db-tool-mcp",
-      "docs": "https://github.com/kirill-scherba/db-tool-mcp#readme",
       "core": false,
       "latest": "1.0.2",
       "versions": {
@@ -242,21 +93,61 @@
             "db-tool-mcp.pl"
           ],
           "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/db-tool-mcp/releases/download/v1.0.2/db-tool-mcp_1.0.2.zip",
-              "sha256": "092755c65107288bdd38e68f9f47b494980fdd271d9b31edf51295089a2f5abb",
-              "size": 8603,
-              "entry": "db-tool-mcp.pl"
-            },
             "linux-amd64": {
               "url": "https://github.com/kirill-scherba/db-tool-mcp/releases/download/v1.0.2/db-tool-mcp_1.0.2.zip",
               "sha256": "092755c65107288bdd38e68f9f47b494980fdd271d9b31edf51295089a2f5abb",
-              "size": 8603,
+              "size": 8716,
+              "entry": "db-tool-mcp.pl"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/db-tool-mcp/releases/download/v1.0.2/db-tool-mcp_1.0.2.zip",
+              "sha256": "092755c65107288bdd38e68f9f47b494980fdd271d9b31edf51295089a2f5abb",
+              "size": 8716,
               "entry": "db-tool-mcp.pl"
             }
           }
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/db-tool-mcp#readme"
+    },
+    {
+      "name": "deploy-check",
+      "title": {
+        "ru": "Проверка деплоя",
+        "en": "Deploy check"
+      },
+      "description": {
+        "ru": "Здоровье сайта: код ответа, время, срок SSL, robots.txt и sitemap.xml.",
+        "en": "Site health: status code, response time, SSL expiry, robots.txt and sitemap.xml."
+      },
+      "category": "web",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "deploy-check-mcp.pl"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
+              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "size": 2099,
+              "entry": "deploy-check-mcp.pl"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
+              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "size": 2099,
+              "entry": "deploy-check-mcp.pl"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
     },
     {
       "name": "discord-mcp",
@@ -270,7 +161,6 @@
       },
       "category": "messaging",
       "repository": "https://github.com/kirill-scherba/discord-mcp",
-      "docs": "https://github.com/kirill-scherba/discord-mcp#readme",
       "core": false,
       "latest": "1.5.3",
       "versions": {
@@ -294,107 +184,198 @@
             }
           ],
           "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.5.3/discord-mcp_1.5.3_windows-amd64.zip",
-              "sha256": "956629fb43065e865b46b1d6ab4f1db8eb436ca43a8825ed48a3417078b553d3",
-              "size": 3335526,
-              "entry": "discord-mcp.exe"
-            },
             "linux-amd64": {
               "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.5.3/discord-mcp_1.5.3_linux-amd64.zip",
               "sha256": "476ff54daf6ebfa459b4f8932873e0743d92957e527972a3c0f32ba57d29269f",
               "size": 10174706,
               "entry": "discord-mcp"
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "deploy-check",
-      "title": {
-        "ru": "Проверка деплоя",
-        "en": "Deploy check"
-      },
-      "description": {
-        "ru": "Здоровье сайта: код ответа, время, срок SSL, robots.txt и sitemap.xml. Perl-скрипт из ai-hub.",
-        "en": "Site health: status code, response time, SSL expiry, robots.txt and sitemap.xml. A Perl script from ai-hub."
-      },
-      "category": "web",
-      "repository": "https://github.com/kirill-scherba/ai-hub",
-      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
-      "core": false,
-      "latest": "1.0.0",
-      "versions": {
-        "1.0.0": {
-          "transport": "stdio",
-          "install": "script",
-          "command": [
-            "deploy-check-mcp.pl"
-          ],
-          "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
-              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
-              "size": 2099,
-              "entry": "deploy-check-mcp.pl"
             },
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
-              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
-              "size": 2099,
-              "entry": "deploy-check-mcp.pl"
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/discord-mcp/releases/download/v1.5.3/discord-mcp_1.5.3_windows-amd64.zip",
+              "sha256": "956629fb43065e865b46b1d6ab4f1db8eb436ca43a8825ed48a3417078b553d3",
+              "size": 3335526,
+              "entry": "discord-mcp.exe"
             }
           }
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/discord-mcp#readme"
     },
     {
-      "name": "cloudflare-mcp",
+      "name": "github-mcp",
       "title": {
-        "ru": "Cloudflare",
-        "en": "Cloudflare"
+        "ru": "GitHub",
+        "en": "GitHub"
       },
       "description": {
-        "ru": "DNS-записи и зоны Cloudflare. Perl-скрипт из ai-hub.",
-        "en": "Cloudflare DNS records and zones. A Perl script from ai-hub."
+        "ru": "GitHub: репозитории, issues, pull requests, проекты, поиск кода. Внутри — Perl.",
+        "en": "GitHub: repos, issues, pull requests, projects, code search. Perl inside."
       },
-      "category": "infra",
-      "repository": "https://github.com/kirill-scherba/ai-hub",
-      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/github-mcp",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "1.3.0",
       "versions": {
-        "1.0.0": {
+        "1.3.0": {
           "transport": "stdio",
-          "install": "script",
           "command": [
-            "cloudflare-mcp.pl"
+            "github-mcp"
           ],
           "settings": [
             {
-              "key": "CLOUDFLARE_API_TOKEN",
-              "label": "API-токен",
-              "hint": "Cloudflare → My Profile → API Tokens",
+              "key": "GITHUB_TOKEN",
+              "label": "personal access token",
+              "hint": "GitHub → Settings → Developer settings → Tokens",
+              "required": true,
               "secret": true
             }
           ],
           "assets": {
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
-              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
-              "size": 2700,
-              "entry": "cloudflare-mcp.pl"
-            },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
-              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
-              "size": 2700,
-              "entry": "cloudflare-mcp.pl"
+              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_linux-amd64.zip",
+              "sha256": "5edcf05f9bd0847260b72496641a69584d8ff814d354504d91676bae5744e0ef",
+              "size": 16099082,
+              "entry": "github-mcp"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/github-mcp/releases/download/v1.3.0/github-mcp_1.3.0_windows-amd64.zip",
+              "sha256": "7a45e1619556752701d02fc9dd31a01f9f89c7031b5474ac3eb12e2cf6bf5f85",
+              "size": 16169540,
+              "entry": "github-mcp.exe"
             }
           }
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/github-mcp#install-in-anytext"
+    },
+    {
+      "name": "gitlab-mcp",
+      "title": {
+        "ru": "GitLab",
+        "en": "GitLab"
+      },
+      "description": {
+        "ru": "Работа с GitLab: проекты, задачи, merge request'ы, пайплайны. Внутри — Perl.",
+        "en": "GitLab work: projects, issues, merge requests, pipelines. Perl inside."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/gitlab-mcp",
+      "core": false,
+      "latest": "1.2.2",
+      "versions": {
+        "1.2.2": {
+          "transport": "stdio",
+          "command": [
+            "gitlab-mcp"
+          ],
+          "settings": [
+            {
+              "key": "GITLAB_HOST",
+              "label": "адрес инстанса по умолчанию",
+              "hint": "https://gitlab.com или свой",
+              "required": true
+            },
+            {
+              "key": "GITLAB_TOKEN",
+              "label": "personal access token, scope api",
+              "hint": "GitLab → User settings → Access tokens",
+              "required": true,
+              "secret": true
+            }
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_linux-amd64.zip",
+              "sha256": "34e4fbb79e8339ad07c2baaa1329e0da49688cfb5ff2c0ec8332b048adc161b9",
+              "size": 16089248,
+              "entry": "gitlab-mcp"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.2.2/gitlab-mcp_1.2.2_windows-amd64.zip",
+              "sha256": "6a0b6c64a5f81fc8e47f260e100c9166ba9be4082c1f9681c2d15576f3ca1e4a",
+              "size": 16157615,
+              "entry": "gitlab-mcp.exe"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/gitlab-mcp#install-in-anytext"
+    },
+    {
+      "name": "go-prolog-mcp",
+      "title": {
+        "ru": "Prolog-движок",
+        "en": "Prolog engine"
+      },
+      "description": {
+        "ru": "Логический вывод и проверка правил: запросы на Prolog, проверка workflow, выбор задач, сверка памяти.",
+        "en": "Logic queries and rule checking: Prolog queries, workflow validation, task selection, memory verification."
+      },
+      "category": "logic",
+      "repository": "https://github.com/kirill-scherba/go-prolog-mcp",
+      "core": false,
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "transport": "stdio",
+          "command": [
+            "go-prolog-mcp"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_linux-amd64.zip",
+              "sha256": "cb6b548ba94a9e567a69355e084deb0c469a3c4ad9ff5d366d0344d01c58a580",
+              "size": 3520525,
+              "entry": "go-prolog-mcp"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/go-prolog-mcp/releases/download/v0.1.0/go-prolog-mcp_0.1.0_windows-amd64.zip",
+              "sha256": "214e4caec0701e3e037b2c9d6650f60373559c532d990e8f6a21dfa89928a5d9",
+              "size": 3577656,
+              "entry": "go-prolog-mcp.exe"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/go-prolog-mcp#install-in-anytext"
+    },
+    {
+      "name": "go-test-oracle-mcp",
+      "title": {
+        "ru": "Тесты Go",
+        "en": "Go tests"
+      },
+      "description": {
+        "ru": "Разбор Go-функции и генерация тестов: граничные случаи, табличные тесты, фаззинг.",
+        "en": "Analyse a Go function and generate tests: edge cases, table tests, fuzzing."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/go-test-oracle",
+      "core": false,
+      "latest": "0.1.0",
+      "versions": {
+        "0.1.0": {
+          "transport": "stdio",
+          "command": [
+            "go-test-oracle-mcp"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_linux-amd64.zip",
+              "sha256": "43ea003b481cf2b38ef8f0efb535265e13819ea2a05a3022a0e918d5eeae8eb2",
+              "size": 1102083,
+              "entry": "go-test-oracle-mcp"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/go-test-oracle/releases/download/v0.1.0/go-test-oracle-mcp_0.1.0_windows-amd64.zip",
+              "sha256": "56c9df5185a295ebf0cab0997c6bf8194f9e711add5b355552232eaf81e580d3",
+              "size": 1145854,
+              "entry": "go-test-oracle-mcp.exe"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/go-test-oracle#install-in-anytext"
     },
     {
       "name": "vision-mcp",
@@ -403,12 +384,11 @@
         "en": "Vision"
       },
       "description": {
-        "ru": "Разбор изображения: OpenAI или локальная Ollama. Perl-скрипт из ai-hub.",
-        "en": "Image analysis via OpenAI or a local Ollama. A Perl script from ai-hub."
+        "ru": "Разбор изображения: OpenAI или локальная Ollama.",
+        "en": "Image analysis via OpenAI or a local Ollama."
       },
       "category": "media",
       "repository": "https://github.com/kirill-scherba/ai-hub",
-      "docs": "https://github.com/kirill-scherba/ai-hub#readme",
       "core": false,
       "latest": "1.0.0",
       "versions": {
@@ -421,19 +401,19 @@
           "settings": [
             {
               "key": "OPENAI_API_KEY",
-              "label": "ключ OpenAI (или OLLAMA_URL для локальной модели)",
+              "label": "ключ OpenAI (или OLLAMA_URL)",
               "hint": "platform.openai.com → API keys",
               "secret": true
             }
           ],
           "assets": {
-            "windows-amd64": {
+            "linux-amd64": {
               "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
               "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
               "size": 3458,
               "entry": "vision-mcp.pl"
             },
-            "linux-amd64": {
+            "windows-amd64": {
               "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
               "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
               "size": 3458,
@@ -441,33 +421,46 @@
             }
           }
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
     },
     {
-      "name": "cooksy",
+      "name": "web-search-mcp",
       "title": {
-        "ru": "Кукси (рецепты)",
-        "en": "Cooksy (recipes)"
+        "ru": "Веб-поиск",
+        "en": "Web search"
       },
       "description": {
-        "ru": "Внешний сервис рецептов: поиск, подборки, избранное, публикация в Telegram. Живёт на cooksy.teonet.dev.",
-        "en": "External recipe service: search, picks, favourites, Telegram publishing. Hosted at cooksy.teonet.dev."
+        "ru": "Поиск в DuckDuckGo, чтение страниц, семантический отбор по вопросу и поиск по ранее прочитанному.",
+        "en": "DuckDuckGo search, page reading, semantic ranking against a question, and search over what was already read."
       },
-      "category": "food",
-      "repository": "https://github.com/teonet-go/cooksy",
-      "docs": "https://cooksy.teonet.dev",
+      "category": "web",
+      "repository": "https://github.com/kirill-scherba/web-search-mcp",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "0.2.2",
       "versions": {
-        "1.0.0": {
-          "transport": "http",
-          "url": "https://cooksy.teonet.dev/mcp"
+        "0.2.2": {
+          "transport": "stdio",
+          "command": [
+            "web-search-mcp"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_linux-amd64.zip",
+              "sha256": "f98ff24679154fa315b1c88c948396b9692792f8d827c63792b40808cb2861d4",
+              "size": 6373781,
+              "entry": "web-search-mcp"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/web-search-mcp/releases/download/v0.2.2/web-search-mcp_0.2.2_windows-amd64.zip",
+              "sha256": "35dbd1b0cc7152adf714c9927d224bd7b26c140b1c361a6e7314da7429e3f5db",
+              "size": 6378948,
+              "entry": "web-search-mcp.exe"
+            }
+          }
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/web-search-mcp#install-in-anytext"
     }
-  ],
-  "locales": [
-    "ru",
-    "en"
   ]
 }

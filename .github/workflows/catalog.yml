@@ -1,0 +1,43 @@
+# Rebuild catalog.json from the servers' own declarations.
+#
+# Each repository declares its servers in mcp.json; this job reads those declarations, takes the newest
+# release of each, collects archives and sha256, and commits the result. Manual runs are for "publish a
+# release and refresh now"; the schedule catches releases nobody announced.
+name: catalog
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'   # once a day, early enough that a release is in the catalog before work
+  push:
+    paths:
+      - 'sources.json'
+      - 'extra.json'
+      - 'build_catalog.py'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 build_catalog.py
+
+      - name: Commit when changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet catalog.json; then
+            echo "catalog unchanged"
+            exit 0
+          fi
+          git config user.name "catalog-bot"
+          git config user.email "catalog@matrica.work"
+          git add catalog.json
+          git commit -m "catalog: rebuilt from the repositories' declarations"
+          git push

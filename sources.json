@@ -1,0 +1,13 @@
+{
+  "_comment": "Which repositories publish MCP servers for this catalog. A repository declares its servers in mcp.json at its root.",
+  "repos": [
+    { "repo": "kirill-scherba/web-search-mcp" },
+    { "repo": "kirill-scherba/go-prolog-mcp" },
+    { "repo": "kirill-scherba/go-test-oracle" },
+    { "repo": "kirill-scherba/gitlab-mcp" },
+    { "repo": "kirill-scherba/github-mcp" },
+    { "repo": "kirill-scherba/db-tool-mcp" },
+    { "repo": "kirill-scherba/discord-mcp" },
+    { "repo": "kirill-scherba/ai-hub", "tag_prefix": "tools-v" }
+  ]
+}

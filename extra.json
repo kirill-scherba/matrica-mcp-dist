@@ -1,0 +1,21 @@
+{
+  "_comment": "Servers that are not derived from our releases: hosted services and third-party endpoints.",
+  "servers": [
+    {
+      "name": "cooksy",
+      "title": { "ru": "Кукси (рецепты)", "en": "Cooksy (recipes)" },
+      "description": {
+        "ru": "Внешний сервис рецептов: поиск, подборки, избранное, публикация в Telegram. Живёт на cooksy.teonet.dev.",
+        "en": "External recipe service: search, picks, favourites, Telegram publishing. Hosted at cooksy.teonet.dev."
+      },
+      "category": "food",
+      "repository": "https://github.com/teonet-go/cooksy",
+      "docs": "https://cooksy.teonet.dev",
+      "core": false,
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": { "transport": "http", "url": "https://cooksy.teonet.dev/mcp" }
+      }
+    }
+  ]
+}
