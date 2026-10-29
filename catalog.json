@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T07:20:00Z",
+  "updated": "2026-10-29T07:40:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -129,24 +129,24 @@
       "category": "dev",
       "repository": "https://github.com/kirill-scherba/gitlab-mcp",
       "core": false,
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "versions": {
-        "1.1.0": {
+        "1.1.1": {
           "transport": "stdio",
           "command": [
             "gitlab-mcp"
           ],
           "assets": {
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.0/gitlab-mcp_1.1.0_windows-amd64.zip",
-              "sha256": "6d6628e9e579bb5601c5f2542c730c9e55a62cdef7537db2787592306525976b",
-              "size": 16156242,
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.1/gitlab-mcp_1.1.1_windows-amd64.zip",
+              "sha256": "7211cf11c0158ceccab47573b0fd5ef72434a60ae1e4d5e407ae2f262a0c1079",
+              "size": 16160903,
               "entry": "gitlab-mcp.exe"
             },
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.0/gitlab-mcp_1.1.0_linux-amd64.zip",
-              "sha256": "550fa6fa6d52fc73ef62d87d84b95f3661610c0735b8e421272228eb6a223ab0",
-              "size": 16088609,
+              "url": "https://github.com/kirill-scherba/gitlab-mcp/releases/download/v1.1.1/gitlab-mcp_1.1.1_linux-amd64.zip",
+              "sha256": "f9ca1d6022905e948928061279ba62c09b4752dc730fc3a47de92499dc247b5e",
+              "size": 16090243,
               "entry": "gitlab-mcp"
             }
           }
