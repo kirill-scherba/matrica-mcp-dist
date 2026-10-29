@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T08:30:00Z",
+  "updated": "2026-10-29T09:10:00Z",
   "servers": [
     {
       "name": "web-search-mcp",
@@ -149,9 +149,25 @@
               "size": 16089248,
               "entry": "gitlab-mcp"
             }
-          }
+          },
+          "settings": [
+            {
+              "key": "GITLAB_HOST",
+              "label": "адрес инстанса по умолчанию",
+              "hint": "https://gitlab.com или свой",
+              "required": true
+            },
+            {
+              "key": "GITLAB_TOKEN",
+              "label": "personal access token, scope api",
+              "hint": "GitLab → User settings → Access tokens",
+              "required": true,
+              "secret": true
+            }
+          ]
         }
-      }
+      },
+      "docs": "https://github.com/kirill-scherba/gitlab-mcp#install-in-anytext"
     }
   ],
   "locales": [
