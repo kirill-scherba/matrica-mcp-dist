@@ -1,7 +1,46 @@
 {
   "schema": 1,
-  "updated": "2026-10-29T22:41:48Z",
+  "updated": "2026-10-30T10:32:20Z",
   "servers": [
+    {
+      "name": "ai-hub",
+      "title": {
+        "ru": "Генератор инструментов",
+        "en": "Tool generator"
+      },
+      "description": {
+        "ru": "Агент пишет MCP-инструменты на Perl, и они сразу доступны: реестр лежит в tools.json рядом с сервером. Полный локальный набор инструментов в комплекте, внешний хаб не нужен.",
+        "en": "The agent writes MCP tools in Perl and they are available at once: the registry lives in tools.json next to the server. A full local tool set ships with it, no external hub needed."
+      },
+      "category": "dev",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "core": false,
+      "latest": "1.0.1",
+      "versions": {
+        "1.0.1": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "generative-mcp-hub.pl"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/ai-hub_1.0.1.zip",
+              "sha256": "1a843e062af9ee6521bc39dc60a45e92a9e52eef636c528fb888fb454f97e299",
+              "size": 17790,
+              "entry": "generative-mcp-hub.pl"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/ai-hub_1.0.1.zip",
+              "sha256": "1a843e062af9ee6521bc39dc60a45e92a9e52eef636c528fb888fb454f97e299",
+              "size": 17790,
+              "entry": "generative-mcp-hub.pl"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
+    },
     {
       "name": "cloudflare-mcp",
       "title": {
@@ -15,9 +54,9 @@
       "category": "infra",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
-        "1.0.0": {
+        "1.0.1": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -33,14 +72,14 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
-              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/cloudflare_1.0.1.zip",
+              "sha256": "2690392640934830a86d363b822ef77f8736427da43c6f380d54488ba6e0edd9",
               "size": 2700,
               "entry": "cloudflare-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/cloudflare_1.0.0.zip",
-              "sha256": "526e3a4f095b9b5ee08c4ecc4e04c5b4c5d4432f20172ee89c9234657640e8b8",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/cloudflare_1.0.1.zip",
+              "sha256": "2690392640934830a86d363b822ef77f8736427da43c6f380d54488ba6e0edd9",
               "size": 2700,
               "entry": "cloudflare-mcp.pl"
             }
@@ -123,9 +162,9 @@
       "category": "web",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
-        "1.0.0": {
+        "1.0.1": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -133,14 +172,14 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
-              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/deploy-check_1.0.1.zip",
+              "sha256": "0d8544d2c48312065f705a4dfe7a4c3552a6a8f716f9c6e19761f52b47331eab",
               "size": 2099,
               "entry": "deploy-check-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/deploy-check_1.0.0.zip",
-              "sha256": "894505d07840072868e806619f90a3794cf854e5c3acdcf6e8532fece87ddfd7",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/deploy-check_1.0.1.zip",
+              "sha256": "0d8544d2c48312065f705a4dfe7a4c3552a6a8f716f9c6e19761f52b47331eab",
               "size": 2099,
               "entry": "deploy-check-mcp.pl"
             }
@@ -378,6 +417,45 @@
       "docs": "https://github.com/kirill-scherba/go-test-oracle#install-in-anytext"
     },
     {
+      "name": "image-compress",
+      "title": {
+        "ru": "Сжатие картинок",
+        "en": "Image compression"
+      },
+      "description": {
+        "ru": "Сжать картинку до заданного размера (по умолчанию 1 МБ): файл или ссылка. Нужен ImageMagick.",
+        "en": "Compress an image to a target size (default 1 MB): a file or a link. Needs ImageMagick."
+      },
+      "category": "media",
+      "repository": "https://github.com/kirill-scherba/ai-hub",
+      "core": false,
+      "latest": "1.0.1",
+      "versions": {
+        "1.0.1": {
+          "transport": "stdio",
+          "install": "script",
+          "command": [
+            "image-compress-mcp.pl"
+          ],
+          "assets": {
+            "linux-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/image-compress_1.0.1.zip",
+              "sha256": "576411d4b7f5b0c8460aa9a263a9540debc261cc5a09e16ba9c746405b667226",
+              "size": 2417,
+              "entry": "image-compress-mcp.pl"
+            },
+            "windows-amd64": {
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/image-compress_1.0.1.zip",
+              "sha256": "576411d4b7f5b0c8460aa9a263a9540debc261cc5a09e16ba9c746405b667226",
+              "size": 2417,
+              "entry": "image-compress-mcp.pl"
+            }
+          }
+        }
+      },
+      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
+    },
+    {
       "name": "mail-mcp",
       "title": {
         "ru": "Почта",
@@ -458,19 +536,19 @@
     {
       "name": "vision-mcp",
       "title": {
-        "ru": "Зрение",
-        "en": "Vision"
+        "ru": "Зрение и картинки",
+        "en": "Vision and images"
       },
       "description": {
-        "ru": "Разбор изображения: OpenAI или локальная Ollama.",
-        "en": "Image analysis via OpenAI or a local Ollama."
+        "ru": "Разбор изображения (OpenAI или локальная Ollama) и генерация картинки по описанию. Один сервер на всё, чему нужен ключ модели.",
+        "en": "Image analysis (OpenAI or a local Ollama) and image generation from a prompt. One server for everything that needs a model key."
       },
       "category": "media",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
-        "1.0.0": {
+        "1.0.1": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -486,15 +564,15 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
-              "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
-              "size": 3458,
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/vision_1.0.1.zip",
+              "sha256": "acbfdd2c6bf45d8f43842ca2d8dc403327c6f7bb8e66c4ca1f9c1a365eb55f2a",
+              "size": 4487,
               "entry": "vision-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.0/vision_1.0.0.zip",
-              "sha256": "fcb33b9d600b1bf9733073bc5e172220f21c622ecb737dc9ad929e2879a2bcd8",
-              "size": 3458,
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/vision_1.0.1.zip",
+              "sha256": "acbfdd2c6bf45d8f43842ca2d8dc403327c6f7bb8e66c4ca1f9c1a365eb55f2a",
+              "size": 4487,
               "entry": "vision-mcp.pl"
             }
           }
