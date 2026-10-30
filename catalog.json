@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-30T19:33:42Z",
+  "updated": "2026-10-30T20:06:01Z",
   "servers": [
     {
       "name": "ai-hub",
@@ -15,9 +15,9 @@
       "category": "dev",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "versions": {
-        "1.0.2": {
+        "1.0.3": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -25,14 +25,14 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/ai-hub_1.0.2.zip",
-              "sha256": "67c9bfbeedf8973cb00c1b7466c2e3c53848397fa657b4c8e432c9cddd5f6844",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/ai-hub_1.0.3.zip",
+              "sha256": "5d627ef8e28999365cb515094cecf4d952e9a89b7a0767dd99529c8e4b166e69",
               "size": 17790,
               "entry": "generative-mcp-hub.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/ai-hub_1.0.2.zip",
-              "sha256": "67c9bfbeedf8973cb00c1b7466c2e3c53848397fa657b4c8e432c9cddd5f6844",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/ai-hub_1.0.3.zip",
+              "sha256": "5d627ef8e28999365cb515094cecf4d952e9a89b7a0767dd99529c8e4b166e69",
               "size": 17790,
               "entry": "generative-mcp-hub.pl"
             }
@@ -54,9 +54,9 @@
       "category": "infra",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "versions": {
-        "1.0.2": {
+        "1.0.3": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -72,14 +72,14 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/cloudflare_1.0.2.zip",
-              "sha256": "f55ee480d6470de89eb41c78a4078e7cd5b7ca264f4233fa91be8928f488aa82",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/cloudflare_1.0.3.zip",
+              "sha256": "83eac5dcdff612a84fe2f29992fe51129daebc1ae581dc3f3771d83f973b50b6",
               "size": 2700,
               "entry": "cloudflare-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/cloudflare_1.0.2.zip",
-              "sha256": "f55ee480d6470de89eb41c78a4078e7cd5b7ca264f4233fa91be8928f488aa82",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/cloudflare_1.0.3.zip",
+              "sha256": "83eac5dcdff612a84fe2f29992fe51129daebc1ae581dc3f3771d83f973b50b6",
               "size": 2700,
               "entry": "cloudflare-mcp.pl"
             }
@@ -390,9 +390,9 @@
       "category": "media",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "versions": {
-        "1.0.2": {
+        "1.0.3": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -400,14 +400,14 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/image-compress_1.0.2.zip",
-              "sha256": "d070d9d71baf625673057d0b2543eb3b15bffbbcb9892bbae93addffcf95869d",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/image-compress_1.0.3.zip",
+              "sha256": "c5f707a450bd17304adaa468843039e0dec90ac0af13ebfacfc6931d19c0255a",
               "size": 2417,
               "entry": "image-compress-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/image-compress_1.0.2.zip",
-              "sha256": "d070d9d71baf625673057d0b2543eb3b15bffbbcb9892bbae93addffcf95869d",
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/image-compress_1.0.3.zip",
+              "sha256": "c5f707a450bd17304adaa468843039e0dec90ac0af13ebfacfc6931d19c0255a",
               "size": 2417,
               "entry": "image-compress-mcp.pl"
             }
@@ -507,9 +507,9 @@
       "category": "media",
       "repository": "https://github.com/kirill-scherba/ai-hub",
       "core": false,
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "versions": {
-        "1.0.2": {
+        "1.0.3": {
           "transport": "stdio",
           "install": "script",
           "command": [
@@ -528,15 +528,15 @@
           },
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/vision_1.0.2.zip",
-              "sha256": "2a4de76b7b154edc043d9134d3b9c39c0f420be98a3a04e03cb85d2354f42fe9",
-              "size": 4602,
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/vision_1.0.3.zip",
+              "sha256": "f8abb8628712d0c26fc42ddb760bc3e68b13f368d93559b6fd241152e3c7d116",
+              "size": 4780,
               "entry": "vision-mcp.pl"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.2/vision_1.0.2.zip",
-              "sha256": "2a4de76b7b154edc043d9134d3b9c39c0f420be98a3a04e03cb85d2354f42fe9",
-              "size": 4602,
+              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.3/vision_1.0.3.zip",
+              "sha256": "f8abb8628712d0c26fc42ddb760bc3e68b13f368d93559b6fd241152e3c7d116",
+              "size": 4780,
               "entry": "vision-mcp.pl"
             }
           }
