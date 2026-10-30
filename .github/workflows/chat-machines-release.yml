@@ -1,0 +1,107 @@
+# Release for chat-machines.
+#
+# It is not a stdio tool like the rest of the catalog: it is a service - an HTTP MCP endpoint, an
+# external connector and the opencode client behind them - so it is built and published here as an
+# archive a person unpacks and installs with the script inside. The catalog cannot offer it the way it
+# offers a tool, because nothing would start the service; this release is what "take it by hand" means.
+name: chat-machines-release
+
+on:
+  push:
+    tags: ['chat-machines/v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'version without the prefix, e.g. 1.0.0'
+        required: true
+      ref:
+        description: 'commit, branch or tag of the chat-machines repository'
+        default: main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Work out the version
+        id: v
+        run: |
+          set -euo pipefail
+          if [ -n "${{ inputs.version }}" ]; then
+            echo "version=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+            echo "tag=chat-machines/v${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            tag="${GITHUB_REF_NAME}"
+            echo "version=${tag#chat-machines/v}" >> "$GITHUB_OUTPUT"
+            echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        with:
+          repository: kirill-scherba/chat-machines
+          ref: ${{ inputs.ref || 'main' }}
+          path: src
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: src/go.mod
+          cache-dependency-path: src/go.sum
+
+      - name: Build both platforms
+        run: |
+          set -euo pipefail
+          version="${{ steps.v.outputs.version }}"
+          cd src
+          for t in linux/amd64 windows/amd64; do
+            os="${t%/*}"; arch="${t#*/}"
+            bin="chat-machines"; [ "$os" = "windows" ] && bin="chat-machines.exe"
+            CGO_ENABLED=0 GOOS="$os" GOARCH="$arch" \
+              go build -trimpath -ldflags "-s -w -X main.appVersion=${version}" -o "../pack/$os-$arch/$bin" .
+          done
+
+      - name: Pack with the deployment files
+        run: |
+          set -euo pipefail
+          version="${{ steps.v.outputs.version }}"
+          for plat in linux-amd64 windows-amd64; do
+            name="chat-machines_${version}_${plat}.zip"
+            cp -r src/deploy "pack/$plat/"
+            cp src/README.md "pack/$plat/"
+            cat > "pack/$plat/INSTALL.txt" <<'TXT'
+chat-machines — installation
+
+It is a service, not a tool that the MCP gateway starts: it keeps rooms, talks to opencode and serves
+an HTTP MCP endpoint at /mcp. Install it once, keep it running, then register the address.
+
+Linux
+  1. unpack anywhere, e.g. ~/chat-machines
+  2. ./deploy/install.sh ./chat-machines      - binary, wrapper and a user service
+  3. edit ~/.config/chat-machines/env         - CM_API_KEY (openssl rand -hex 16), CM_OPENCODE_URL
+  4. systemctl --user start chat-machines     - and `status` to see it up
+  5. register in the MCP window: address http://127.0.0.1:8083/mcp
+
+Windows
+  1. unpack anywhere
+  2. set the same variables as in deploy/env.example and run chat-machines.exe
+  3. register http://127.0.0.1:8083/mcp in the MCP window
+
+The API key is required for POST /room/create and for the external connector; without it the service
+answers only the local MCP endpoint.
+TXT
+            (cd "pack/$plat" && zip -qr "../../$name" .)
+            sha256sum "$name" > "$name.sha256"
+          done
+          ls -la *.zip
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: ${{ steps.v.outputs.tag }}
+          body: |
+            chat-machines as a service: binary for linux-amd64 and windows-amd64, the deployment files
+            from the repository, and INSTALL.txt.
+          files: |
+            *.zip
+            *.zip.sha256

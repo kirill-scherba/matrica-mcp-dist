@@ -21,3 +21,14 @@ verifies the sha256 of every archive and only then installs it.
 
 One release per server and version, tagged `<server>/v<version>`, with the archives and their
 `sha256sums`. CI in the source repository creates them.
+
+## chat-machines
+
+Not a stdio tool like the rest: a **service** - rooms, an external connector, opencode behind them, and
+an HTTP MCP endpoint at `/mcp`. It is built here by `chat-machines-release.yml`, because the archive is
+what a person installs by hand; the catalog does not offer it yet, since nothing in an install would
+start the service.
+
+Release tag: `chat-machines/v<version>`. Unpack, run `deploy/install.sh`, set `CM_API_KEY` in
+`~/.config/chat-machines/env`, start the user service, then register `http://127.0.0.1:8083/mcp`.
+Linux gets a systemd unit; on Windows the binary runs as a console application with the same variables.
