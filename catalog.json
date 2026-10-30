@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-30T10:54:47Z",
+  "updated": "2026-10-30T11:02:13Z",
   "servers": [
     {
       "name": "ai-hub",
@@ -148,45 +148,6 @@
         }
       },
       "docs": "https://github.com/kirill-scherba/db-tool-mcp#readme"
-    },
-    {
-      "name": "deploy-check",
-      "title": {
-        "ru": "Проверка деплоя",
-        "en": "Deploy check"
-      },
-      "description": {
-        "ru": "Здоровье сайта: код ответа, время, срок SSL, robots.txt и sitemap.xml.",
-        "en": "Site health: status code, response time, SSL expiry, robots.txt and sitemap.xml."
-      },
-      "category": "web",
-      "repository": "https://github.com/kirill-scherba/ai-hub",
-      "core": false,
-      "latest": "1.0.1",
-      "versions": {
-        "1.0.1": {
-          "transport": "stdio",
-          "install": "script",
-          "command": [
-            "deploy-check-mcp.pl"
-          ],
-          "assets": {
-            "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/deploy-check_1.0.1.zip",
-              "sha256": "0d8544d2c48312065f705a4dfe7a4c3552a6a8f716f9c6e19761f52b47331eab",
-              "size": 2099,
-              "entry": "deploy-check-mcp.pl"
-            },
-            "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/ai-hub/releases/download/tools-v1.0.1/deploy-check_1.0.1.zip",
-              "sha256": "0d8544d2c48312065f705a4dfe7a4c3552a6a8f716f9c6e19761f52b47331eab",
-              "size": 2099,
-              "entry": "deploy-check-mcp.pl"
-            }
-          }
-        }
-      },
-      "docs": "https://github.com/kirill-scherba/ai-hub#readme"
     },
     {
       "name": "discord-mcp",
