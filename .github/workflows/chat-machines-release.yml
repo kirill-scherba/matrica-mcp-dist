@@ -70,26 +70,26 @@ jobs:
             cp -r src/deploy "pack/$plat/"
             cp src/README.md "pack/$plat/"
             cat > "pack/$plat/INSTALL.txt" <<'TXT'
-chat-machines — installation
+          chat-machines - installation
 
-It is a service, not a tool that the MCP gateway starts: it keeps rooms, talks to opencode and serves
-an HTTP MCP endpoint at /mcp. Install it once, keep it running, then register the address.
+          It is a service, not a tool that the MCP gateway starts: it keeps rooms, talks to opencode and
+          serves an HTTP MCP endpoint at /mcp. Install it once, keep it running, then register the address.
 
-Linux
-  1. unpack anywhere, e.g. ~/chat-machines
-  2. ./deploy/install.sh ./chat-machines      - binary, wrapper and a user service
-  3. edit ~/.config/chat-machines/env         - CM_API_KEY (openssl rand -hex 16), CM_OPENCODE_URL
-  4. systemctl --user start chat-machines     - and `status` to see it up
-  5. register in the MCP window: address http://127.0.0.1:8083/mcp
+          Linux
+            1. unpack anywhere, e.g. ~/chat-machines
+            2. ./deploy/install.sh ./chat-machines   - binary, wrapper and a user service
+            3. edit ~/.config/chat-machines/env      - CM_API_KEY (openssl rand -hex 16), CM_OPENCODE_URL
+            4. systemctl --user start chat-machines  - and `status` to see it up
+            5. register in the MCP window: http://127.0.0.1:8083/mcp
 
-Windows
-  1. unpack anywhere
-  2. set the same variables as in deploy/env.example and run chat-machines.exe
-  3. register http://127.0.0.1:8083/mcp in the MCP window
+          Windows
+            1. unpack anywhere
+            2. set the same variables as in deploy/env.example and run chat-machines.exe
+            3. register http://127.0.0.1:8083/mcp in the MCP window
 
-The API key is required for POST /room/create and for the external connector; without it the service
-answers only the local MCP endpoint.
-TXT
+          The API key is required for POST /room/create and for the external connector; without it the
+          service answers only the local MCP endpoint.
+          TXT
             (cd "pack/$plat" && zip -qr "../../$name" .)
             sha256sum "$name" > "$name.sha256"
           done
