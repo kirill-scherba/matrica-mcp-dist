@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-21T12:45:48Z",
+  "updated": "2026-11-21T12:54:46Z",
   "servers": [
     {
       "name": "ai-hub",
@@ -429,9 +429,9 @@
       "category": "mail",
       "repository": "https://github.com/kirill-scherba/mail-mcp",
       "core": false,
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "versions": {
-        "1.1.0": {
+        "1.1.1": {
           "transport": "stdio",
           "command": [
             "mail-mcp",
@@ -478,15 +478,15 @@
           ],
           "assets": {
             "linux-amd64": {
-              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.0/mail-mcp_1.1.0_linux-amd64.zip",
-              "sha256": "64d658243bcd0841a5818bddad8a58d50c3c45a366eefb238a6152a4b64bc326",
-              "size": 3048307,
+              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.1/mail-mcp_1.1.1_linux-amd64.zip",
+              "sha256": "5f1807733be2e16775c6c13643c7986fd402ce3d86cdeda75c55d3dabc2533b8",
+              "size": 3059581,
               "entry": "mail-mcp"
             },
             "windows-amd64": {
-              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.0/mail-mcp_1.1.0_windows-amd64.zip",
-              "sha256": "341a8dfcd2a6be2ed1fc3534a8ab0f25d34e0c1c09b06263620714d8e06370b4",
-              "size": 3118751,
+              "url": "https://github.com/kirill-scherba/mail-mcp/releases/download/v1.1.1/mail-mcp_1.1.1_windows-amd64.zip",
+              "sha256": "9c7f3234c19fe087bf3b0cb1fa771f389772cae3ce82741e27ffd3ccd608cf6a",
+              "size": 3129165,
               "entry": "mail-mcp.exe"
             }
           }
